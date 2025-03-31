@@ -17,6 +17,12 @@
         ++ [
           ./5264.patch
         ];
+      # src = pkgs.fetchFromGitHub {
+      #   owner = "wezterm";
+      #   repo = "wezterm";
+      #   rev = "20240203-110809-5046fc22";
+      #   hash = "sha256-hhuzs89wWKc7n6HMKriWvV+pLhfLvO06XRWtmdCQ0rs=";
+      # };
     });
   };
 }

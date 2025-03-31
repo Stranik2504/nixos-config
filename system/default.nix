@@ -31,6 +31,9 @@
   ];
 
   services.xserver.enable = true;
+
+  # natural scroll
+  # services.xserver.libinput.naturalScrolling
   
   services.pipewire = {
     enable = true;

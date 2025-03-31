@@ -43,6 +43,8 @@
             dbus-python
             ipython
             httpx
+            pip
+            pipreqs
           ]
           ++ black.optional-dependencies.d
     ))
@@ -52,12 +54,13 @@
     clang
     vscode
     # jetbrains.rider
-#     (pkgs-unstable.jetbrains.idea-ultimate.overrideAttrs {
-#       src = fetchurl {
-#         url = "https://download.jetbrains.com/idea/ideaIU-242.20224.91.tar.gz";
-#         hash = "sha256-TltiejsfR6F37pr8o2O8jT+bx0tlMmKrtxFUCq4DsUE=";
-#       };
-#     })
+    # (pkgs-unstable.jetbrains.idea-ultimate.overrideAttrs {
+    #   src = fetchurl {
+    #     url = "https://download.jetbrains.com/idea/ideaIU-242.20224.91.tar.gz";
+    #     hash = "sha256-TltiejsfR6F37pr8o2O8jT+bx0tlMmKrtxFUCq4DsUE=";
+    #   };
+    # })
+    jetbrains-toolbox
     (with dotnetCorePackages;
       combinePackages [
         sdk_7_0
@@ -65,4 +68,5 @@
       ])
     nuget
   ];
+  
 }

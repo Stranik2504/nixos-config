@@ -96,6 +96,7 @@ in {
 
   wayland.windowManager.hyprland = {
     enable = true;
+    xwayland.enable = true;
     systemd.variables = ["--all"];
     package = pkgs-unstable.hyprland;
     # plugins = [

@@ -8,7 +8,7 @@
     enable = true;
     lfs.enable = true;
     userName = "Stranik2504";
-    userEmail = "rund2504@gmail.com";
+    userEmail = "rund2504@mail.ru";
   };
 
   home.packages = with pkgs;

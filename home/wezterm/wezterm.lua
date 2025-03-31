@@ -28,6 +28,11 @@ return {
             mods = 'ALT',
             action = wezterm.action.DisableDefaultAssignment,
         },
+        {
+            key = 'V',
+            mods = 'CTRL',
+            action = act.PasteFrom 'PrimarySelection',
+        }
     },
     mouse_bindings = {
         {
