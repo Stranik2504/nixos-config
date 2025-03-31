@@ -8,7 +8,7 @@
     ./theme.nix
     ./unclutter.nix
     ./waybar.nix
-    ./libs.nix
+    # ./libs.nix
     ./wezterm
   ];
   home.username = vars.USER;
