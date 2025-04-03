@@ -10,6 +10,7 @@
     ./waybar.nix
     # ./libs.nix
     ./wezterm
+    ./nix-ld.nix
   ];
   home.username = vars.USER;
   home.homeDirectory = "/home/" + vars.USER;

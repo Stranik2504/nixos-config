@@ -1,6 +1,8 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-24.05";
+    nix-ld.url = "github:Mic92/nix-ld";
+    nix-ld.inputs.nixpkgs.follows = "nixpkgs";
     nixpkgs-unstable.url = "github:nixos/nixpkgs?ref=nixos-24.05";
     home-manager = {
       url = "github:nix-community/home-manager/release-24.05";
@@ -26,6 +28,7 @@
       system = "x86_64-linux";
       modules = [
         ./system
+        inputs.nix-ld.nixosModules.nix-ld
         home-manager.nixosModules.home-manager
         {
           home-manager = {
@@ -37,6 +40,9 @@
               inherit inputs vars pkgs-unstable;
             };
           };
+        }
+        { 
+          programs.nix-ld.dev.enable = true; 
         }
       ];
       specialArgs = {
